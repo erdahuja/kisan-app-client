@@ -30,7 +30,7 @@ const Message = ({ contact, history }) => {
                 onClick={async () => {
                   await sendSMS(
                     "Deepak",
-                    "918010099223",
+                    "919971792703",
                     message,
                     contact.name
                   );
