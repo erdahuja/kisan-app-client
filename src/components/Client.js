@@ -1,3 +1,7 @@
+import constants from '../constants'
+console.log({
+  SERVER_URL: constants.SERVER_URL
+})
 const makeRequest = (url, type = 'get', _body) => {
   return fetch(url, {
     method: type,
@@ -19,7 +23,7 @@ export const getContacts = async () => {
 
 export const getMessages = async () => {
   const url = (
-    'http://localhost:3000/messages'
+    constants.SERVER_URL + '/messages'
   );
   return await makeRequest(url).then(setLocalStorage('messages'));
 }
@@ -49,7 +53,7 @@ const parseJson = (response) => {
 
 export const sendSMS = async (from, to, text, name) => {
 try {
-  const response = checkStatus(await makeRequest('http://localhost:3000/send-sms', 'post', {
+  const response = checkStatus(await makeRequest(constants.SERVER_URL+ '/send-sms', 'post', {
     from, to, text, name
   }));
   console.log(response)
