@@ -1,7 +1,5 @@
 import constants from '../constants'
-console.log({
-  SERVER_URL: constants.SERVER_URL
-})
+
 const makeRequest = (url, type = 'get', _body) => {
   return fetch(url, {
     method: type,
@@ -52,13 +50,12 @@ const parseJson = (response) => {
 }
 
 export const sendSMS = async (from, to, text, name) => {
-try {
-  const response = checkStatus(await makeRequest(constants.SERVER_URL+ '/send-sms', 'post', {
-    from, to, text, name
-  }));
-  console.log(response)
-} catch (error) {
-  console.log(error)
-}
+  try {
+    checkStatus(await makeRequest(constants.SERVER_URL+ '/send-sms', 'post', {
+      from, to, text, name
+    }));
+  } catch (error) {
+    throw error;
+  }
 }
 

@@ -13,7 +13,7 @@ const MessageTable = ({ messages }) => {
       </thead>
       <tbody>
         {messages.map(msg => (
-          <tr key={msg.to}>
+          <tr key={msg.date}>
             <td>
               <h4 className="ui image header">
                 <div className="content">{msg.name}</div>
