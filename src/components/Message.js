@@ -34,7 +34,7 @@ const Message = ({ contact, history }) => {
                     message,
                     contact.name
                   );
-                  history.push("/");
+                  history.push("/messages");
                 }}
               >
                 <i className="icon edit" /> Add Reply
