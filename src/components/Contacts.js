@@ -34,7 +34,7 @@ class Contacts extends Component {
       return (
         <div className='ui two column divided grid'>
           <div
-            className='ui six wide column'
+            className='ui ten wide column'
             style={{ maxWidth: 250 }}
           >
             <ContactsMenu

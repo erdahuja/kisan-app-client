@@ -2,7 +2,7 @@ import React from "react";
 
 const MessageTable = ({ messages }) => {
   return (
-    <table className="ui very basic collapsing celled table">
+    <table className="ui very basic collapsing celled table unstackable">
       <thead>
         <tr>
           <th>Name</th>
